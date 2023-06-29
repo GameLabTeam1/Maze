@@ -11,11 +11,16 @@ public class CheeseDropHandler : MonoBehaviour
     public HUD HUDScreen;
 
     #region PrivateVars
-    private int m_CheeseCount; //how many block of cheese have already been spawned
     private GameObject m_SelectedCheese;
     private bool m_TouchingCheese = false;
+    private int m_CheeseCount;
+
     #endregion
 
+    private void Start()
+    {
+        m_CheeseCount = MaxCheeseAmount;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -53,11 +58,13 @@ public class CheeseDropHandler : MonoBehaviour
     /// </summary>
     private void CheeseDrop()
     {
-        if(m_CheeseCount < MaxCheeseAmount && !m_TouchingCheese)
+        if(m_CheeseCount > 0 && !m_TouchingCheese)
         {
             Instantiate(Cheese, transform.position, Quaternion.identity);
-            m_CheeseCount++;
-            HUDScreen.CheeseDropped();
+            m_CheeseCount--;
+
+            HUDScreen.HUDCheeseRefresh(m_CheeseCount);
+            //HUDScreen.CheeseDropped();
         }
     }
 
@@ -69,10 +76,13 @@ public class CheeseDropHandler : MonoBehaviour
         if (m_TouchingCheese)
         {
             Destroy(m_SelectedCheese);
-            m_CheeseCount--;
+            m_CheeseCount++;
+            
             m_TouchingCheese = false;
             m_SelectedCheese = null;
-            HUDScreen.CheesePickedUp();
+            HUDScreen.HUDCheeseRefresh(m_CheeseCount);
+
+            //HUDScreen.CheesePickedUp();
         }
     }
 

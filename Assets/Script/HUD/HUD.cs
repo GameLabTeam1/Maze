@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,13 +8,14 @@ using UnityEngine.UI;
 public class HUD : MonoBehaviour
 {
     public TextMeshProUGUI Timer;
-    public List<GameObject> HUDCheese;
+    public List<Image> HUDCheese;
     private float m_Time;
 
     // Update is called once per frame
     void Update()
     {
-        m_Time += Time.deltaTime;
+        m_Time = Time.time;
+        //m_Time += Time.deltaTime;
         TimeWrite();
     }
 
@@ -25,13 +27,30 @@ public class HUD : MonoBehaviour
         Timer.text = string.Format("{0}:{1}", minutes, seconds);
     }
 
+    public void HUDCheeseRefresh(int count)
+    {
+        foreach (Image image in HUDCheese)
+        {
+            image.enabled = false;
+        }
+
+        for (int i = 0; i < count; i++) 
+        {
+            HUDCheese[i].enabled = true;
+        }
+    }
+
     public void CheeseDropped()
     {
+        //HUDCheese.Last().enabled = false;
+        //m_NotActiveCheese.Add(HUDCheese.Last());
+        //HUDCheese.Remove(HUDCheese.Last());
+
         for (int i = HUDCheese.Count; i >= 0; i--)
         {
-            if (HUDCheese[i].activeInHierarchy)
+            if (HUDCheese[i].enabled)
             {
-                HUDCheese[i].SetActive(false);
+                HUDCheese[i].enabled = false;
                 return;
             }
             else continue;
@@ -40,11 +59,15 @@ public class HUD : MonoBehaviour
 
     public void CheesePickedUp()
     {
+        //m_NotActiveCheese.Last().enabled = true;
+        //HUDCheese.Add(m_NotActiveCheese.Last());
+        //m_NotActiveCheese.Remove(m_NotActiveCheese.Last());
+
         for (int i = 0; i <= HUDCheese.Count; i++)
         {
-            if (!HUDCheese[i].activeInHierarchy)
+            if (!HUDCheese[i].enabled)
             {
-                HUDCheese[i].SetActive(true);
+                HUDCheese[i].enabled = true;
                 return;
             }
             else continue;
