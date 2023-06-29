@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit _hit;
     private NavMeshAgent _agent;
     [SerializeField] private LayerMask _floorlayerMask;
+    [SerializeField] private float _maxDistance;
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
@@ -25,6 +26,12 @@ public class PlayerMovement : MonoBehaviour
             {
                 _agent.SetDestination(_hit.point);
             }
+        }
+
+        if (_agent.remainingDistance > _maxDistance)
+        {
+            _agent.ResetPath();
+            Debug.Log("Annullato");
         }
     }
 }

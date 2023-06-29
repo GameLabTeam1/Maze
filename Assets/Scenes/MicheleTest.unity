@@ -1497,6 +1497,7 @@ MonoBehaviour:
   _floorlayerMask:
     serializedVersion: 2
     m_Bits: 64
+  _maxDistance: 20
 --- !u!54 &1181467323
 Rigidbody:
   m_ObjectHideFlags: 0
