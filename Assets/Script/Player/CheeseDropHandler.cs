@@ -8,7 +8,7 @@ public class CheeseDropHandler : MonoBehaviour
     public GameObject Cheese;
     [Tooltip ("Amount of blocks of cheese the mouse has")]
     public int MaxCheeseAmount;
-    public HUD HUDscreen;
+    public HUD HUDScreen;
 
     #region PrivateVars
     private int m_CheeseCount; //how many block of cheese have already been spawned
@@ -21,36 +21,43 @@ public class CheeseDropHandler : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            CheeseInteract();
+            CheeseDrop();
+            
+        }
+        if (Input.GetKeyDown(KeyCode.C) && m_TouchingCheese)
+        {
+            CheesePickUp();
+            
         }
     }
 
-    /// <summary>
-    /// choose what to do with the cheese (drop one or pick up one)
-    /// </summary>
-    private void CheeseInteract()
-    {
-        if (m_TouchingCheese)
-        {
-            CheesePickUp();
-            HUDscreen.CheesePickedUp();
-        }
-        else if (!m_TouchingCheese) 
-        { 
-            CheeseDrop();
-            HUDscreen.CheeseDropped();
-        }
-    }
+    ///// <summary>
+    ///// choose what to do with the cheese (drop one or pick up one)
+    ///// </summary>
+    //private void CheeseInteract()
+    //{
+    //    if (m_TouchingCheese)
+    //    {
+    //        CheesePickUp();
+    //        HUDScreen.CheesePickedUp();
+    //    }
+    //    else if (!m_TouchingCheese) 
+    //    { 
+    //        CheeseDrop();
+    //        HUDScreen.CheeseDropped();
+    //    }
+    //}
 
     /// <summary>
     /// places a block of cheese if the number of cheese already spawned is not higher than the maximum amount
     /// </summary>
     private void CheeseDrop()
     {
-        if(m_CheeseCount <= MaxCheeseAmount)
+        if(m_CheeseCount < MaxCheeseAmount && !m_TouchingCheese)
         {
             Instantiate(Cheese, transform.position, Quaternion.identity);
             m_CheeseCount++;
+            HUDScreen.CheeseDropped();
         }
     }
 
@@ -59,21 +66,30 @@ public class CheeseDropHandler : MonoBehaviour
     /// </summary>
     private void CheesePickUp()
     {
-        Destroy(m_SelectedCheese);
-    }
-
-    #region Collisions
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.TryGetComponent(out ICheese isCheese))
+        if (m_TouchingCheese)
         {
-            m_TouchingCheese = true;
+            Destroy(m_SelectedCheese);
+            m_CheeseCount--;
+            m_TouchingCheese = false;
+            m_SelectedCheese = null;
+            HUDScreen.CheesePickedUp();
         }
     }
 
-    private void OnCollisionExit(Collision collision)
+    #region Collisions
+
+    private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.TryGetComponent(out ICheese isCheese))
+            if (collision.gameObject.CompareTag("Cheese"))
+            {
+                m_SelectedCheese = collision.gameObject;
+                m_TouchingCheese = true;
+            }
+    }
+
+    private void OnTriggerExit(Collider collision)
+    {
+        if (collision.gameObject.CompareTag("Cheese"))
         {
             m_TouchingCheese = false;
         }
