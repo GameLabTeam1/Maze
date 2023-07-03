@@ -13,15 +13,20 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private Animator _animator;
     public UIDialogue uiDialogue;
     private bool isInDialogueRange = false;
+    private bool isInKeyRange = false;
     private bool isInDoorRange = false;
     private bool isInObstaclesRange = false;
     private bool isTriggered = false;
     private string _textClone;
     private Obstacles currentObstacle = null;
+    private GameObject currentKey = null;
+    private Door currentDoor = null;
+    private KeyInventory _keyInventory;
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
+        _keyInventory = GetComponent<KeyInventory>();
     }
 
     // Update is called once per frame
@@ -42,6 +47,7 @@ public class PlayerMovement : MonoBehaviour
             _agent.ResetPath();
             Debug.Log("Annullato");
         }
+
         if (isInDialogueRange && Input.GetKeyDown(KeyCode.E))
         {
             if (!uiDialogue.dialoguePanel.activeSelf)
@@ -55,7 +61,8 @@ public class PlayerMovement : MonoBehaviour
                 uiDialogue.HideDialogue();
             }
         }
-        if (Input.GetKeyDown(KeyCode.E)) //Se si vuole che non lo faccia quando si vuole aggiungere: isInObstaclesRange
+
+        if (isInObstaclesRange && Input.GetKeyDown(KeyCode.E)) //Se si vuole che lo faccia sempre togliere: isInObstaclesRange
         {
             _animator.SetBool("TAIL", true);
             if (!isTriggered && currentObstacle != null)
@@ -68,12 +75,24 @@ public class PlayerMovement : MonoBehaviour
         {
             _animator.SetBool("TAIL", false);
         }
+
+        if (isInKeyRange && Input.GetKeyDown(KeyCode.E))
+        {
+            _keyInventory.AddKey(currentKey);
+            Destroy(currentKey);
+        }
+
+        if (isInDoorRange && Input.GetKeyDown(KeyCode.E))
+        {
+            currentDoor.Open();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
         SnakeDialogue snakeDialogue = other.GetComponent<SnakeDialogue>();
         Obstacles obstacle = other.GetComponent<Obstacles>();
+        Door door = other.GetComponent<Door>();
         if (snakeDialogue != null)
         {
             isInDialogueRange = true;
@@ -92,12 +111,25 @@ public class PlayerMovement : MonoBehaviour
             }
             else isTriggered = true;
         }
+
+        if (door != null)
+        {
+            isInDoorRange = true;
+            currentDoor = door;
+        }
+
+        if (other.gameObject.CompareTag("Key"))
+        {
+            isInKeyRange = true;
+            currentKey = other.gameObject;
+        }
     }
 
     private void OnTriggerExit(Collider other)
     {
         SnakeDialogue snakeDialogue = other.GetComponent<SnakeDialogue>();
         Obstacles obstacle = other.GetComponent<Obstacles>();
+        Door door = other.GetComponent<Door>();
         if (snakeDialogue != null)
         {
             isInDialogueRange = false;
@@ -111,6 +143,16 @@ public class PlayerMovement : MonoBehaviour
             currentObstacle = null;
             Debug.Log("Sasso lontano");
             obstacle.uIPrompt.SetActive(false);
+        }
+        if (door != null)
+        {
+            isInDoorRange = false;
+            currentDoor = null;
+        }
+        if (other.gameObject.CompareTag("Key"))
+        {
+            isInKeyRange = false;
+            currentKey = null;
         }
     }
 }
