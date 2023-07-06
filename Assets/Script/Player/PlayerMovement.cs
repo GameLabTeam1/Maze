@@ -39,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !IsMenuActive())
         {
             Ray ray = _camera.ScreenPointToRay(Input.mousePosition);
 
@@ -98,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            if (!IsMenuActive()) OpenMenu(); else CloseMenu();
+            ResumeButton();
         }
     }
 
@@ -190,5 +190,10 @@ public class PlayerMovement : MonoBehaviour
     {
         _pauseMenu.SetActive(false);
         _hud.isRunning = true;
+    }
+
+    public void ResumeButton()
+    {
+        if (!IsMenuActive()) OpenMenu(); else CloseMenu();
     }
 }
