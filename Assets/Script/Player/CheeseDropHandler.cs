@@ -29,7 +29,7 @@ public class CheeseDropHandler : MonoBehaviour
             CheeseDrop();
             
         }
-        if (Input.GetKeyDown(KeyCode.C) && m_TouchingCheese)
+        if (Input.GetKeyDown(KeyCode.E) && m_TouchingCheese)
         {
             CheesePickUp();
             
