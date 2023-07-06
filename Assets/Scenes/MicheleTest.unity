@@ -3067,7 +3067,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   _maxDistance: 20
-  PauseMenu: {fileID: 908686129447492696}
+  _hud: {fileID: 1774572072}
+  _pauseMenu: {fileID: 908686129447492676}
 --- !u!54 &1181467323
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4954,6 +4955,7 @@ MonoBehaviour:
   - {fileID: 425239891}
   - {fileID: 1590366279}
   - {fileID: 1569627772}
+  isRunning: 0
 --- !u!114 &1774572073
 MonoBehaviour:
   m_ObjectHideFlags: 0

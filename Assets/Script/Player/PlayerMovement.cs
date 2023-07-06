@@ -5,11 +5,14 @@ using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour
 {
-    [SerializeField] private Camera _camera;
+    [SerializeField] 
+    private Camera _camera;
     private RaycastHit _hit;
     private NavMeshAgent _agent;
-    [SerializeField] private LayerMask _floorlayerMask;
-    [SerializeField] private float _maxDistance;
+    [SerializeField] 
+    private LayerMask _floorlayerMask;
+    [SerializeField] 
+    private float _maxDistance;
     private bool _isInDialogueRange = false;
     private bool _isInKeyRange = false;
     private bool _isInDoorRange = false;
@@ -21,7 +24,10 @@ public class PlayerMovement : MonoBehaviour
     private Key _keyClone = null;
     private Obstacles _currentObstacle = null;
     private Door _currentDoor = null;
-    [SerializeField] private Canvas PauseMenu;
+    [SerializeField]
+    private HUD _hud;
+    [SerializeField] 
+    private GameObject _pauseMenu;
     
     void Start()
     {
@@ -92,7 +98,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape)) 
         {
-            TogglePauseMenu();
+            if (!IsMenuActive()) OpenMenu(); else CloseMenu();
         }
     }
 
@@ -170,16 +176,19 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void TogglePauseMenu()
+    private bool IsMenuActive()
     {
-        PauseMenu.enabled = !PauseMenu.enabled;
-        if (PauseMenu.enabled)
-        {
-            Time.timeScale = 0f;
-        }
-        else
-        {
-            Time.timeScale = 1f;
-        }
+        return _pauseMenu.activeInHierarchy;
+    }
+
+    private void OpenMenu()
+    {
+        _pauseMenu.SetActive(true);
+        _hud.isRunning = false;
+    }
+    private void CloseMenu()
+    {
+        _pauseMenu.SetActive(false);
+        _hud.isRunning = true;
     }
 }

@@ -12,18 +12,22 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI Timer;
     public List<Image> HUDCheese;
     private float m_Time;
+    public bool isRunning;
 
     private void Start()
     {
+        isRunning = true;
         WriteSceneName();
     }
 
     // Update is called once per frame
     void Update()
     {
-        m_Time = Time.time;
-        //m_Time += Time.deltaTime;
-        TimeWrite();
+        if (isRunning)
+        {
+            m_Time += Time.deltaTime;
+            TimeWrite();
+        }        
     }
 
     private void WriteSceneName()
