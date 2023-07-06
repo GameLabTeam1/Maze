@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class UIDialogue : MonoBehaviour
 {
-    public TextMeshProUGUI dialogueText;
     public GameObject dialoguePanel;
+    public TextMeshProUGUI dialogueText;
 
     public void ShowDialogue(string text)
     {
