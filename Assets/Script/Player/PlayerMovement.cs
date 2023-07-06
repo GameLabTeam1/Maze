@@ -10,23 +10,23 @@ public class PlayerMovement : MonoBehaviour
     private NavMeshAgent _agent;
     [SerializeField] private LayerMask _floorlayerMask;
     [SerializeField] private float _maxDistance;
-    [SerializeField] private Animator _animator;
-    public UIDialogue uiDialogue;
-    private bool isInDialogueRange = false;
-    private bool isInKeyRange = false;
-    private bool isInDoorRange = false;
-    private bool isInObstaclesRange = false;
-    private bool isTriggered = false;
+    private bool _isInDialogueRange = false;
+    private bool _isInKeyRange = false;
+    private bool _isInDoorRange = false;
+    //private bool _isInObstaclesRange = false;
+    private bool _isTriggered = false;
     private string _textClone;
-    private Obstacles currentObstacle = null;
-    private GameObject currentKey = null;
-    private Door currentDoor = null;
-    private KeyInventory _keyInventory;
+    private Animator _animator;
+    private UIDialogue _uiDialogue;
+    private Key _keyClone = null;
+    private Obstacles _currentObstacle = null;
+    private Door _currentDoor = null;
+    
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
-        _keyInventory = GetComponent<KeyInventory>();
+        _uiDialogue = GetComponent<UIDialogue>();
     }
 
     // Update is called once per frame
@@ -42,49 +42,51 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
+        if (_agent.remainingDistance <= _agent.stoppingDistance && !_agent.pathPending)
+        {
+            _agent.ResetPath();
+        }
+
         if (_agent.remainingDistance > _maxDistance)
         {
             _agent.ResetPath();
             Debug.Log("Annullato");
         }
 
-        if (isInDialogueRange && Input.GetKeyDown(KeyCode.E))
+        if (_isInDialogueRange && Input.GetKeyDown(KeyCode.E))
         {
-            if (!uiDialogue.dialoguePanel.activeSelf)
+            if (!_uiDialogue.dialoguePanel.activeSelf)
             {
-                // Se il pannello del dialogo non è attivo, avvia il dialogo
-                uiDialogue.ShowDialogue(_textClone);
+                _uiDialogue.ShowDialogue(_textClone);
             }
             else
             {
-                // Se il pannello del dialogo è attivo, chiudi il dialogo
-                uiDialogue.HideDialogue();
+                _uiDialogue.HideDialogue();
             }
         }
 
-        if (isInObstaclesRange && Input.GetKeyDown(KeyCode.E)) //Se si vuole che lo faccia sempre togliere: isInObstaclesRange
+        if (/*_isInObstaclesRange &&*/ Input.GetMouseButtonDown(1)) //Se si vuole che lo faccia sempre togliere: isInObstaclesRange
         {
             _animator.SetBool("TAIL", true);
-            if (!isTriggered && currentObstacle != null)
+            if (!_isTriggered && _currentObstacle != null)
             {
-                currentObstacle.Use();
-                isTriggered = true;
-                currentObstacle.uIPrompt.SetActive(false);
+                _currentObstacle.Use();
+                _isTriggered = true;
+                _currentObstacle.uIPrompt.SetActive(false);
             }
-        } else if (Input.GetKeyUp(KeyCode.E))
+        } else if (Input.GetMouseButtonUp(1))
         {
             _animator.SetBool("TAIL", false);
         }
 
-        if (isInKeyRange && Input.GetKeyDown(KeyCode.E))
+        if (_isInKeyRange && Input.GetKeyDown(KeyCode.E))
         {
-            _keyInventory.AddKey(currentKey);
-            Destroy(currentKey);
+            _keyClone.AddKey();
         }
 
-        if (isInDoorRange && Input.GetKeyDown(KeyCode.E))
+        if (_isInDoorRange && Input.GetKeyDown(KeyCode.E))
         {
-            currentDoor.Open();
+            _currentDoor.Open();
         }
     }
 
@@ -93,35 +95,38 @@ public class PlayerMovement : MonoBehaviour
         SnakeDialogue snakeDialogue = other.GetComponent<SnakeDialogue>();
         Obstacles obstacle = other.GetComponent<Obstacles>();
         Door door = other.GetComponent<Door>();
+        Key key = other.GetComponent<Key>();
         if (snakeDialogue != null)
         {
-            isInDialogueRange = true;
+            _isInDialogueRange = true;
             _textClone = snakeDialogue.dialogueText;
             snakeDialogue.uIPrompt.SetActive(true);
         }
         if (obstacle != null)
         {
-            isInObstaclesRange = true;
-            currentObstacle = obstacle;
+            //_isInObstaclesRange = true;
+            _currentObstacle = obstacle;
             Debug.Log("Sasso copiato");
             if (!obstacle.IsTriggered())
             {
                 obstacle.uIPrompt.SetActive(true);
-                isTriggered = false;
+                _isTriggered = false;
             }
-            else isTriggered = true;
+            else _isTriggered = true;
         }
 
         if (door != null)
         {
-            isInDoorRange = true;
-            currentDoor = door;
+            _isInDoorRange = true;
+            _currentDoor = door;
+            door._uIPrompt.SetActive(_keyClone);
         }
 
-        if (other.gameObject.CompareTag("Key"))
+        if (key != null)
         {
-            isInKeyRange = true;
-            currentKey = other.gameObject;
+            _keyClone = key;
+            _isInKeyRange = true;
+            key.uIPrompt.SetActive(true);
         }
     }
 
@@ -130,29 +135,32 @@ public class PlayerMovement : MonoBehaviour
         SnakeDialogue snakeDialogue = other.GetComponent<SnakeDialogue>();
         Obstacles obstacle = other.GetComponent<Obstacles>();
         Door door = other.GetComponent<Door>();
+        Key key = other.GetComponent<Key>();
         if (snakeDialogue != null)
         {
-            isInDialogueRange = false;
-            uiDialogue.HideDialogue();
+            _isInDialogueRange = false;
+            _uiDialogue.HideDialogue();
             _textClone = string.Empty;
             snakeDialogue.uIPrompt.SetActive(false);
         }
         if (obstacle != null)
         {
-            isInObstaclesRange = false;
-            currentObstacle = null;
+            //_isInObstaclesRange = false;
+            _currentObstacle = null;
             Debug.Log("Sasso lontano");
             obstacle.uIPrompt.SetActive(false);
         }
         if (door != null)
         {
-            isInDoorRange = false;
-            currentDoor = null;
+            _isInDoorRange = false;
+            _currentDoor = null;
+            door._uIPrompt.SetActive(false);
         }
-        if (other.gameObject.CompareTag("Key"))
+        if (key != null)
         {
-            isInKeyRange = false;
-            currentKey = null;
+            _isInKeyRange = false;
+            _keyClone = null;
+            key.uIPrompt.SetActive(false);
         }
     }
 }

@@ -1,28 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public GameObject requiredKey;
-    private KeyInventory inventory;
-    [SerializeField] private Animator _doorAnim;
+    public CameraFade cameraFade;
+    private GameObject _requiredKey;
+    private KeyInventory _keyInventory;
+    private Animator _doorAnim;
+    public GameObject _uIPrompt;
 
     private void Start()
     {
-        inventory = FindObjectOfType<KeyInventory>();
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        _keyInventory = player.GetComponent<KeyInventory>();
+        _requiredKey = GameObject.FindGameObjectWithTag("Key");
+        _doorAnim = GetComponent<Animator>();
     }
 
     public void Open()
     {
-        if (inventory.HasKey(requiredKey))
+        if (_keyInventory.HasKey(_requiredKey))
         {
             _doorAnim.SetBool("KEY", true);
-            Debug.Log("La porta si è aperta!");
         }
         else
         {
             Debug.Log("Non hai la chiave");
         }
+    }
+
+    private IEnumerator TeleportPlayerToNextLevel()
+    {
+        cameraFade.FadeNextLevel();
+        yield return new WaitForSeconds(2f);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
