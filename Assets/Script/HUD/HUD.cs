@@ -3,13 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class HUD : MonoBehaviour
 {
+    public TextMeshProUGUI SceneName;
     public TextMeshProUGUI Timer;
     public List<Image> HUDCheese;
     private float m_Time;
+
+    private void Start()
+    {
+        WriteSceneName();
+    }
 
     // Update is called once per frame
     void Update()
@@ -19,6 +26,10 @@ public class HUD : MonoBehaviour
         TimeWrite();
     }
 
+    private void WriteSceneName()
+    {
+        SceneName.text = SceneManager.GetActiveScene().name;
+    }
     private void TimeWrite()
     {
         string minutes = Mathf.Floor(m_Time / 60).ToString("00");

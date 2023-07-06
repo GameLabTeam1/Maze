@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private Key _keyClone = null;
     private Obstacles _currentObstacle = null;
     private Door _currentDoor = null;
+    [SerializeField] private Canvas PauseMenu;
     
     void Start()
     {
@@ -88,6 +89,11 @@ public class PlayerMovement : MonoBehaviour
         {
             _currentDoor.Open();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            TogglePauseMenu();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -106,7 +112,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //_isInObstaclesRange = true;
             _currentObstacle = obstacle;
-            Debug.Log("Sasso copiato");
+            Debug.Log("Sesso copiato");
             if (!obstacle.IsTriggered())
             {
                 obstacle.uIPrompt.SetActive(true);
@@ -147,7 +153,7 @@ public class PlayerMovement : MonoBehaviour
         {
             //_isInObstaclesRange = false;
             _currentObstacle = null;
-            Debug.Log("Sasso lontano");
+            Debug.Log("Sesso lontano");
             obstacle.uIPrompt.SetActive(false);
         }
         if (door != null)
@@ -161,6 +167,19 @@ public class PlayerMovement : MonoBehaviour
             _isInKeyRange = false;
             _keyClone = null;
             key.uIPrompt.SetActive(false);
+        }
+    }
+
+    private void TogglePauseMenu()
+    {
+        PauseMenu.enabled = !PauseMenu.enabled;
+        if (PauseMenu.enabled)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
+            Time.timeScale = 1f;
         }
     }
 }
