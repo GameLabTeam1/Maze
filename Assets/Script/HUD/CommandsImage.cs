@@ -12,7 +12,7 @@ public class CommandsImage : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        DestroyAfterTime(TimeUntilDestroy);
+        StartCoroutine(DestroyAfterTime(TimeUntilDestroy));
     }
 
     private IEnumerator DestroyAfterTime(float time)
