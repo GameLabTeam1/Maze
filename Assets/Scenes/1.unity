@@ -404,7 +404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIPrompt: {fileID: 1357810671}
-  dialogueText: Ciao
+  dialogueText: W.I.P. (KEY)
 --- !u!136 &117007053
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -434,7 +434,7 @@ Transform:
   - {fileID: 1041761461}
   - {fileID: 1774886848}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 66.145, z: 0}
 --- !u!208 &117007057
 NavMeshObstacle:
@@ -1293,7 +1293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &325286367
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4351,7 +4351,7 @@ RectTransform:
   - {fileID: 1660347081}
   - {fileID: 1396932615}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -7254,7 +7254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uIPrompt: {fileID: 188073148}
-  dialogueText: Ciao
+  dialogueText: W.I.P. (False Road)
 --- !u!136 &1612679124
 CapsuleCollider:
   m_ObjectHideFlags: 0
