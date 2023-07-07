@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             _agent.ResetPath();
         }
 
-        if (_agent.remainingDistance > _maxDistance)
+        if (_agent.remainingDistance > _maxDistance || IsMenuActive())
         {
             _agent.ResetPath();
             Debug.Log("Annullato");
