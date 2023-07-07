@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Door : MonoBehaviour
 {
     public CameraFade cameraFade;
+    [SerializeField]
     private GameObject _requiredKey;
     private KeyInventory _keyInventory;
     private Animator _doorAnim;
@@ -16,7 +17,6 @@ public class Door : MonoBehaviour
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         _keyInventory = player.GetComponent<KeyInventory>();
-        _requiredKey = GameObject.FindGameObjectWithTag("Key");
         _doorAnim = GetComponent<Animator>();
     }
 
@@ -36,6 +36,6 @@ public class Door : MonoBehaviour
     {
         cameraFade.FadeNextLevel();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

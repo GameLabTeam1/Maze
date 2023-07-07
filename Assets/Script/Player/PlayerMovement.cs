@@ -96,7 +96,7 @@ public class PlayerMovement : MonoBehaviour
             _currentDoor.Open();
         }
 
-        if (Input.GetKeyDown(KeyCode.Escape)) 
+        if (Input.GetKeyDown(KeyCode.Escape) && !IsMenuActive()) 
         {
             ResumeButton();
         }
