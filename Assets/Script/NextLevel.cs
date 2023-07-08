@@ -20,6 +20,6 @@ public class NextLevel : MonoBehaviour
     {
         cameraFade.FadeNextLevel();
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
+        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }

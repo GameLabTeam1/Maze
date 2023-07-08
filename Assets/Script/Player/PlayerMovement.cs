@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
     private Key _keyClone = null;
     private Obstacles _currentObstacle = null;
     private Door _currentDoor = null;
+    private KeyInventory _keyInventory;
     [SerializeField]
     private HUD _hud;
     [SerializeField] 
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
         _agent = GetComponent<NavMeshAgent>();
         _animator = GetComponent<Animator>();
         _uiDialogue = GetComponent<UIDialogue>();
+        _keyInventory = GetComponent<KeyInventory>();
     }
 
     // Update is called once per frame
@@ -105,6 +107,7 @@ public class PlayerMovement : MonoBehaviour
         if (_isInDoorRange && Input.GetKeyDown(KeyCode.E))
         {
             _currentDoor.Open();
+            _keyInventory.keys.Clear();
         }
 
         if (Input.GetKeyDown(KeyCode.Escape) && !IsMenuActive()) 
