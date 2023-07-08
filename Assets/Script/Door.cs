@@ -6,17 +6,19 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
-    public CameraFade cameraFade;
     [SerializeField]
     private GameObject _requiredKey;
     private KeyInventory _keyInventory;
     private Animator _doorAnim;
+    private UIDialogue _uiDialogue;
     public GameObject _uIPrompt;
+    public string missingKey;
 
     private void Start()
     {
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         _keyInventory = player.GetComponent<KeyInventory>();
+        _uiDialogue = player.GetComponent<UIDialogue>();
         _doorAnim = GetComponent<Animator>();
     }
 
@@ -28,14 +30,7 @@ public class Door : MonoBehaviour
         }
         else
         {
-            Debug.Log("Non hai la chiave");
+            _uiDialogue.ShowDialogue(missingKey);
         }
-    }
-
-    private IEnumerator TeleportPlayerToNextLevel()
-    {
-        cameraFade.FadeNextLevel();
-        yield return new WaitForSeconds(2f);
-        SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex - 1);
-    }
+    }    
 }

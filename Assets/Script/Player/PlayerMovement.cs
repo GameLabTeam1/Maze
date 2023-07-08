@@ -46,18 +46,43 @@ public class PlayerMovement : MonoBehaviour
             if (Physics.Raycast(ray, out _hit, Mathf.Infinity, _floorlayerMask))
             {
                 _agent.SetDestination(_hit.point);
+                _animator.SetBool("CHANGE", Random.value < 0.5f);
             }
         }
 
         if (_agent.remainingDistance <= _agent.stoppingDistance && !_agent.pathPending)
         {
             _agent.ResetPath();
+            _animator.SetBool("MOVE", false);
+        }
+
+        if (_agent.remainingDistance > 0.1f)
+        {
+            _animator.SetBool("MOVE", true);
         }
 
         if (_agent.remainingDistance > _maxDistance || IsMenuActive())
         {
+            _animator.SetBool("MOVE", false);
             _agent.ResetPath();
             Debug.Log("Annullato");
+        }
+
+
+        if (/*_isInObstaclesRange &&*/ Input.GetMouseButtonDown(1)) //Se si vuole che lo faccia sempre togliere: isInObstaclesRange
+        {
+            _agent.ResetPath();
+            _animator.SetBool("TAIL", true);
+            _animator.SetBool("MOVE", false);
+            if (!_isTriggered && _currentObstacle != null)
+            {
+                _currentObstacle.Use();
+                _isTriggered = true;
+                _currentObstacle.uIPrompt.SetActive(false);
+            }
+        } else if (Input.GetMouseButtonUp(1))
+        {
+            _animator.SetBool("TAIL", false);
         }
 
         if (_isInDialogueRange && Input.GetKeyDown(KeyCode.E))
@@ -70,20 +95,6 @@ public class PlayerMovement : MonoBehaviour
             {
                 _uiDialogue.HideDialogue();
             }
-        }
-
-        if (/*_isInObstaclesRange &&*/ Input.GetMouseButtonDown(1)) //Se si vuole che lo faccia sempre togliere: isInObstaclesRange
-        {
-            _animator.SetBool("TAIL", true);
-            if (!_isTriggered && _currentObstacle != null)
-            {
-                _currentObstacle.Use();
-                _isTriggered = true;
-                _currentObstacle.uIPrompt.SetActive(false);
-            }
-        } else if (Input.GetMouseButtonUp(1))
-        {
-            _animator.SetBool("TAIL", false);
         }
 
         if (_isInKeyRange && Input.GetKeyDown(KeyCode.E))
@@ -118,7 +129,6 @@ public class PlayerMovement : MonoBehaviour
         {
             //_isInObstaclesRange = true;
             _currentObstacle = obstacle;
-            Debug.Log("Sesso copiato");
             if (!obstacle.IsTriggered())
             {
                 obstacle.uIPrompt.SetActive(true);
@@ -131,7 +141,8 @@ public class PlayerMovement : MonoBehaviour
         {
             _isInDoorRange = true;
             _currentDoor = door;
-            door._uIPrompt.SetActive(_keyClone);
+            //door._uIPrompt.SetActive(_keyClone);
+            door._uIPrompt.SetActive(true);
         }
 
         if (key != null)
@@ -159,7 +170,6 @@ public class PlayerMovement : MonoBehaviour
         {
             //_isInObstaclesRange = false;
             _currentObstacle = null;
-            Debug.Log("Sesso lontano");
             obstacle.uIPrompt.SetActive(false);
         }
         if (door != null)
@@ -167,6 +177,7 @@ public class PlayerMovement : MonoBehaviour
             _isInDoorRange = false;
             _currentDoor = null;
             door._uIPrompt.SetActive(false);
+            _uiDialogue.HideDialogue();
         }
         if (key != null)
         {
