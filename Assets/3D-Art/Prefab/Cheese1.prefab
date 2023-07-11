@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 2106697102490138197}
   - component: {fileID: 3067978629893585392}
   - component: {fileID: 970333335083224378}
+  - component: {fileID: 1604273610665626189}
   m_Layer: 0
   m_Name: Cheese1
-  m_TagString: Untagged
+  m_TagString: Cheese
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 1618953316634766575}
   m_LocalRotation: {x: -0, y: -0.9799539, z: -0, w: 0.19922456}
   m_LocalPosition: {x: -1.501, y: -0.012, z: -7.591}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -83,3 +84,16 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &1604273610665626189
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618953316634766575}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9529204, y: 0.7043524, z: 1.0654249}
+  m_Center: {x: 0, y: 0, z: 0}

@@ -6,12 +6,14 @@ using UnityEngine.SceneManagement;
 public class NextLevel : MonoBehaviour
 {
     public CameraFade cameraFade;
+    public HUD hud;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.TryGetComponent(out PlayerMovement player))
         {
             player.enabled = false;
+            hud.SaveTime();
             StartCoroutine(TeleportPlayerToNextLevel());
         }
     }

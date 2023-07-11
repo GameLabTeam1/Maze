@@ -11,13 +11,16 @@ public class HUD : MonoBehaviour
     public TextMeshProUGUI SceneName;
     public TextMeshProUGUI Timer;
     public List<Image> HUDCheese;
-    private float m_Time;
+    private TimeHolder _timeHolder;
+    private float _time;
     public bool isRunning;
 
     private void Start()
     {
         isRunning = true;
         WriteSceneName();
+        _timeHolder = GetComponent<TimeHolder>();
+        _timeHolder.LoadSceneTime(_time);
     }
 
     // Update is called once per frame
@@ -25,9 +28,9 @@ public class HUD : MonoBehaviour
     {
         if (isRunning)
         {
-            m_Time += Time.deltaTime;
+            _time += Time.deltaTime;
             TimeWrite();
-        }        
+        }
     }
 
     private void WriteSceneName()
@@ -36,8 +39,8 @@ public class HUD : MonoBehaviour
     }
     private void TimeWrite()
     {
-        string minutes = Mathf.Floor(m_Time / 60).ToString("00");
-        string seconds = Mathf.Floor(m_Time % 60).ToString("00");
+        string minutes = Mathf.Floor(_time / 60).ToString("00");
+        string seconds = Mathf.Floor(_time % 60).ToString("00");
 
         Timer.text = string.Format("{0}:{1}", minutes, seconds);
     }
@@ -49,7 +52,7 @@ public class HUD : MonoBehaviour
             image.enabled = false;
         }
 
-        for (int i = 0; i < count; i++) 
+        for (int i = 0; i < count; i++)
         {
             HUDCheese[i].enabled = true;
         }
@@ -87,5 +90,10 @@ public class HUD : MonoBehaviour
             }
             else continue;
         }
+    }
+
+    public void SaveTime()
+    {
+        _timeHolder.SaveSceneTime(_time);
     }
 }

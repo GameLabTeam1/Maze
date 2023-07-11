@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
 {
+    public HUD hud;
     [SerializeField]
     private GameObject _requiredKey;
     private KeyInventory _keyInventory;
@@ -32,5 +33,10 @@ public class Door : MonoBehaviour
         {
             _uiDialogue.ShowDialogue(missingKey);
         }
-    }    
+    }
+
+    private void FinalLevel()
+    {
+        hud.SaveTime();
+    }
 }
