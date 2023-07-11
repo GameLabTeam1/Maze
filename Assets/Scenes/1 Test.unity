@@ -8843,6 +8843,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -119653281049368680, guid: 36481de5bd47040488ec35e664014f6e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb089557913870a48843c1cfe349affd, type: 2}
     - target: {fileID: 919132149155446097, guid: 36481de5bd47040488ec35e664014f6e,
         type: 3}
       propertyPath: m_Name
@@ -8939,10 +8944,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1107882631573348104, guid: 6956ec6041713e14193dcf8b29880b15,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb20e84be6f536a40bd5c5acaec47646, type: 2}
+    - target: {fileID: 133218305686399375, guid: 6956ec6041713e14193dcf8b29880b15,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb20e84be6f536a40bd5c5acaec47646, type: 2}
     - target: {fileID: 919132149155446097, guid: 6956ec6041713e14193dcf8b29880b15,
         type: 3}
       propertyPath: m_Name
       value: MouseModel2
       objectReference: {fileID: 0}
+    - target: {fileID: 8917272599682679023, guid: 6956ec6041713e14193dcf8b29880b15,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb20e84be6f536a40bd5c5acaec47646, type: 2}
+    - target: {fileID: 9216153089212346203, guid: 6956ec6041713e14193dcf8b29880b15,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: eb20e84be6f536a40bd5c5acaec47646, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6956ec6041713e14193dcf8b29880b15, type: 3}
