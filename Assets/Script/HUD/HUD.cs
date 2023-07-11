@@ -20,7 +20,7 @@ public class HUD : MonoBehaviour
         isRunning = true;
         WriteSceneName();
         _timeHolder = GetComponent<TimeHolder>();
-        _timeHolder.LoadSceneTime(_time);
+        _time = _timeHolder.LoadSceneTime();
     }
 
     // Update is called once per frame

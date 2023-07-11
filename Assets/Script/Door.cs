@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.Rendering;
 using UnityEngine.SceneManagement;
 
 public class Door : MonoBehaviour
@@ -13,8 +14,10 @@ public class Door : MonoBehaviour
     private Animator _doorAnim;
     private UIDialogue _uiDialogue;
     public GameObject _uIPrompt;
-    public NextLevel nextLevel;
     public string missingKey;
+    [Header("Only on Final Snake")]
+    [Tooltip("Only for the Final Snake")]
+    public NextLevel nextLevel;
 
     private void Start()
     {
