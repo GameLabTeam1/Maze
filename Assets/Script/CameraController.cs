@@ -11,7 +11,7 @@ public class CameraController : MonoBehaviour
     private void Update()
     {
         Vector3 desiredPosition = target.position + offset;
-        desiredPosition.y = transform.position.y;
+        //desiredPosition.y = transform.position.y;
         transform.position = desiredPosition;
         transform.rotation = Quaternion.Euler(rotation);
     }
