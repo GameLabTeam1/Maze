@@ -28,6 +28,7 @@ public class Door : MonoBehaviour
         if (_keyInventory.HasKey(_requiredKey))
         {
             _doorAnim.SetBool("KEY", true);
+            _uIPrompt.SetActive(false);
         }
         else
         {
