@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: 839a3cfef25525e4f82a929a655e33d8, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 7d497b0187bcd7a46bb46739e6a54da7, type: 2}
 --- !u!1 &15356621
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,8 +1154,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dc918670e011de41883ba9e29997a50, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraFade: {fileID: 0}
-  hud: {fileID: 0}
+  cameraFade: {fileID: 1907281361}
+  hud: {fileID: 1907281360}
 --- !u!65 &214799516
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13593,6 +13593,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a138d3795d65c47af7ee8f4cbd687a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1907281361 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 215677417802579976, guid: 3e57112e349902141a727509b4b71e06,
+    type: 3}
+  m_PrefabInstance: {fileID: 1907281359}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85216d60f188f874b8f9540bcda8b5f9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1912939397
 GameObject:
   m_ObjectHideFlags: 0
@@ -15268,7 +15280,7 @@ Transform:
   m_GameObject: {fileID: 6966582605439593805}
   m_LocalRotation: {x: 0.110693395, y: 0.80319434, z: -0.2685, w: 0.5201285}
   m_LocalPosition: {x: -1.5745659, y: 15.373, z: -19.68}
-  m_LocalScale: {x: 0.16803265, y: 0.16803265, z: 0.16803265}
+  m_LocalScale: {x: 0.16803269, y: 0.16803262, z: 0.16803266}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1382673694}
