@@ -1173,6 +1173,7 @@ GameObject:
   - component: {fileID: 8767600100148803420}
   - component: {fileID: 2104420460540193657}
   - component: {fileID: 758666201643162598}
+  - component: {fileID: 6214252791379354643}
   m_Layer: 0
   m_Name: SM_Snake_01 (1) Variant
   m_TagString: Untagged
@@ -1246,6 +1247,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -0.18, y: 0.54, z: 0}
+--- !u!208 &6214252791379354643
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981691780194309218}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.19, y: 0.55, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &7154594574215018181
 GameObject:
   m_ObjectHideFlags: 0

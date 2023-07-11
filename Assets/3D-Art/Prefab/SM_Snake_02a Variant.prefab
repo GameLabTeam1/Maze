@@ -791,6 +791,7 @@ GameObject:
   - component: {fileID: 8252094940703496861}
   - component: {fileID: 7373489081985945276}
   - component: {fileID: 8551045799617870999}
+  - component: {fileID: 940992051933866800}
   m_Layer: 0
   m_Name: SM_Snake_02a Variant
   m_TagString: Untagged
@@ -864,6 +865,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   uIPrompt: {fileID: 9121952433243890922}
   dialogueText: 
+--- !u!208 &940992051933866800
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833507637659974471}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.24, y: 0.51, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &4977002723254156153
 GameObject:
   m_ObjectHideFlags: 0
