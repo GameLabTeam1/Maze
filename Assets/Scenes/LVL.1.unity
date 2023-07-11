@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 23800000, guid: e12f65a48b00896488c630f5c9a8b00a, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 6f21639dc5a16e44db772ae22821b62c, type: 2}
 --- !u!1 &2895835
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,6 +743,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 344152804}
     m_Modifications:
+    - target: {fileID: 2104420460540193657, guid: b4111ad335678e646a47fe4b11bdddc9,
+        type: 3}
+      propertyPath: dialogueText
+      value: "Hello there. I know you\u2019re confused but you can do it. You just
+        have to find your way through this maze. I\u2019m sure you\u2019ll succeed!"
+      objectReference: {fileID: 0}
     - target: {fileID: 4560122330722526334, guid: b4111ad335678e646a47fe4b11bdddc9,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -9851,6 +9857,7 @@ MonoBehaviour:
   hud: {fileID: 0}
   _requiredKey: {fileID: 3907200190898956999}
   _uIPrompt: {fileID: 1231007492}
+  nextLevel: {fileID: 0}
   missingKey: Missing Key
 --- !u!95 &1226235209
 Animator:
@@ -12329,6 +12336,12 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.462
+      objectReference: {fileID: 0}
+    - target: {fileID: 7960441116320394934, guid: 697b200469ad3fb48a335730e0b6e9e9,
+        type: 3}
+      propertyPath: dialogueText
+      value: "See this? It\u2019s a key, press E to take it. You\u2019re gonna need
+        it."
       objectReference: {fileID: 0}
     - target: {fileID: 8416085555877618283, guid: 697b200469ad3fb48a335730e0b6e9e9,
         type: 3}
@@ -15111,7 +15124,7 @@ GameObject:
   - component: {fileID: 1906346598}
   - component: {fileID: 1906346597}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Start
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15824,7 +15837,7 @@ GameObject:
   - component: {fileID: 2037134159}
   - component: {fileID: 2037134158}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Finish
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16108,6 +16121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e052e40f40d07ec49a63133020774cdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  totalTime: {fileID: 0}
 --- !u!1 &2056870109
 GameObject:
   m_ObjectHideFlags: 0

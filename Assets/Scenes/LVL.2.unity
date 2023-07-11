@@ -521,6 +521,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8551045799617870999, guid: a861c4c3054170f4f824f496200282ff,
+        type: 3}
+      propertyPath: dialogueText
+      value: You made it here, I see. Listen, have you noticed the big rocks on the
+        ground? You can push them away with a Tail Whip. Simply press the right button
+        on the mouse.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a861c4c3054170f4f824f496200282ff, type: 3}
 --- !u!4 &54375227 stripped
@@ -1164,7 +1171,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 214799514}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -6355,6 +6362,32 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 948614816}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &948614818 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3825661370890577051, guid: 77ca666fee0e13c42a9206bf7b9b38b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 948614816}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &948614819
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 948614818}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c3f920a7724665f4e97a2adf5c78ccbc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!1 &950134140
 GameObject:
   m_ObjectHideFlags: 0
@@ -9564,7 +9597,7 @@ PrefabInstance:
     - target: {fileID: 7497946148355583495, guid: 4b5c461bc1d14d544b131e7334ee1438,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 15.2453
+      value: 15.451
       objectReference: {fileID: 0}
     - target: {fileID: 7497946148355583495, guid: 4b5c461bc1d14d544b131e7334ee1438,
         type: 3}
@@ -9988,7 +10021,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1382673693}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.06878612, y: -0.6480233, z: 0.50732404, w: 0.5638764}
   m_LocalPosition: {x: 0, y: 0, z: -1.8}
   m_LocalScale: {x: 7.5123825, y: 7.5123844, z: 7.5123844}
   m_ConstrainProportionsScale: 0
@@ -10019,7 +10052,7 @@ LookAtConstraint:
   m_IsContraintActive: 1
   m_IsLocked: 1
   m_Sources:
-  - sourceTransform: {fileID: 0}
+  - sourceTransform: {fileID: 1783294119}
     weight: 1
 --- !u!114 &1382673696
 MonoBehaviour:
@@ -10808,6 +10841,7 @@ MonoBehaviour:
   hud: {fileID: 1907281360}
   _requiredKey: {fileID: 6966582605439593805}
   _uIPrompt: {fileID: 2015351711}
+  nextLevel: {fileID: 0}
   missingKey: Missing key
 --- !u!95 &1510346444
 Animator:
@@ -11491,7 +11525,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686735074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.466, y: 0, z: -35.276}
+  m_LocalPosition: {x: -43.466, y: 0.146, z: -35.531}
   m_LocalScale: {x: 0.03643, y: 0.036430005, z: 0.036429998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11867,6 +11901,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 517538140}
     m_Modifications:
+    - target: {fileID: 2104420460540193657, guid: b4111ad335678e646a47fe4b11bdddc9,
+        type: 3}
+      propertyPath: dialogueText
+      value: "This is the last piece of advice you\u2019re gonna get. When you get
+        lost, you can press the spacebar to place a block of cheese on the ground
+        and maybe that will help you in these mazes. Now go, find the exit, make
+        us proud and be free."
+      objectReference: {fileID: 0}
     - target: {fileID: 4560122330722526334, guid: b4111ad335678e646a47fe4b11bdddc9,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -14233,7 +14275,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2029026257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.155, y: 0, z: -35.449}
+  m_LocalPosition: {x: -43.155, y: 0.177, z: -35.303}
   m_LocalScale: {x: 0.03643, y: 0.036430005, z: 0.036429998}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -15389,6 +15431,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77ca666fee0e13c42a9206bf7b9b38b6, type: 3}
+--- !u!1 &3825661369605753378 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3825661370890577051, guid: 77ca666fee0e13c42a9206bf7b9b38b6,
+    type: 3}
+  m_PrefabInstance: {fileID: 3825661369605753377}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3825661369605753379
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3825661369605753378}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d671247c75b0f3b40821280904c10cee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
 --- !u!23 &5196968117067533847
 MeshRenderer:
   m_ObjectHideFlags: 0

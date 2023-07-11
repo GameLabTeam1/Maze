@@ -13,6 +13,7 @@ public class Door : MonoBehaviour
     private Animator _doorAnim;
     private UIDialogue _uiDialogue;
     public GameObject _uIPrompt;
+    public NextLevel nextLevel;
     public string missingKey;
 
     private void Start()
@@ -39,5 +40,6 @@ public class Door : MonoBehaviour
     private void FinalLevel()
     {
         hud.SaveTime();
+        nextLevel.StartCoroutine(nextLevel.TeleportPlayerToNextLevel());
     }
 }

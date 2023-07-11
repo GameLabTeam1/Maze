@@ -18,7 +18,7 @@ public class NextLevel : MonoBehaviour
         }
     }
 
-    private IEnumerator TeleportPlayerToNextLevel()
+    public IEnumerator TeleportPlayerToNextLevel()
     {
         cameraFade.FadeNextLevel();
         yield return new WaitForSeconds(2f);
