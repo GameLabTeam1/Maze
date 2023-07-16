@@ -5485,6 +5485,11 @@ PrefabInstance:
       propertyPath: _pauseMenu
       value: 
       objectReference: {fileID: 215677418510318198}
+    - target: {fileID: 7497946148355583496, guid: 4b5c461bc1d14d544b131e7334ee1438,
+        type: 3}
+      propertyPath: _maxDistance
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7497946148355583501, guid: 4b5c461bc1d14d544b131e7334ee1438,
         type: 3}
       propertyPath: dialogueText
@@ -7354,7 +7359,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &877347607
@@ -9800,7 +9805,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1284058047
@@ -14425,7 +14430,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &1996953674

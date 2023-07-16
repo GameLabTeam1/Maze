@@ -674,7 +674,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &75676694
@@ -709,7 +709,7 @@ Transform:
   - {fileID: 1538252433}
   - {fileID: 47954659}
   m_Father: {fileID: 263323542}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &97000139 stripped
 Transform:
@@ -886,7 +886,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 78a8fb1742902a34188ea4a5e54caa14,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 78a8fb1742902a34188ea4a5e54caa14,
         type: 3}
@@ -1641,13 +1641,13 @@ Transform:
   m_Children:
   - {fileID: 8085019687784834007}
   - {fileID: 1190938635}
-  - {fileID: 1940321423}
   - {fileID: 146685057}
   - {fileID: 450700306}
   - {fileID: 1026600512}
   - {fileID: 1156590244}
   - {fileID: 75676695}
   - {fileID: 372954043}
+  - {fileID: 1940321423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1893,6 +1893,11 @@ PrefabInstance:
       propertyPath: _pauseMenu
       value: 
       objectReference: {fileID: 215677418053722483}
+    - target: {fileID: 7497946148355583496, guid: 4b5c461bc1d14d544b131e7334ee1438,
+        type: 3}
+      propertyPath: _maxDistance
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 7497946148355583501, guid: 4b5c461bc1d14d544b131e7334ee1438,
         type: 3}
       propertyPath: dialogueText
@@ -2488,7 +2493,7 @@ Transform:
   - {fileID: 1878802615}
   - {fileID: 1733331287}
   m_Father: {fileID: 263323542}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &396484405
 PrefabInstance:
@@ -2762,7 +2767,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2aae4400035426346a6bc3758be68c2c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2aae4400035426346a6bc3758be68c2c,
         type: 3}
@@ -2828,7 +2833,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ee7159e6e62649043b03d139b3d91b98, type: 2}
+      objectReference: {fileID: 2100000, guid: 7846deb0119307842b7688b9416e59ac, type: 2}
     - target: {fileID: 8788366504472951827, guid: 2aae4400035426346a6bc3758be68c2c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -4041,7 +4046,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &822114913
@@ -4324,7 +4329,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &875997556
@@ -4975,7 +4980,7 @@ Transform:
   - {fileID: 875997557}
   - {fileID: 611459572}
   m_Father: {fileID: 263323542}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1068723530
 GameObject:
@@ -5270,7 +5275,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1156590243
@@ -5315,7 +5320,7 @@ Transform:
   - {fileID: 1700420460}
   - {fileID: 52015181}
   m_Father: {fileID: 263323542}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1166003866
 GameObject:
@@ -6178,7 +6183,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1346613584
@@ -6756,7 +6761,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1477898789
@@ -7455,7 +7460,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1604334494
@@ -7598,7 +7603,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1639869611
@@ -8956,7 +8961,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1904350422
@@ -9446,7 +9451,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 263323542}
-  m_RootOrder: 2
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!154 &1940321424
 TerrainCollider:
@@ -9474,7 +9479,7 @@ Terrain:
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
+  m_DetailObjectDensity: 0.052
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
@@ -9885,7 +9890,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &2033752389 stripped
@@ -10188,7 +10193,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &2077499133
