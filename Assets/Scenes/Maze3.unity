@@ -419,6 +419,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6081847530176107136, guid: a95b95ef734f2b4468564ace0f449cd2,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081847530176107136, guid: a95b95ef734f2b4468564ace0f449cd2,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6081847530176107136, guid: a95b95ef734f2b4468564ace0f449cd2,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     - target: {fileID: 8286343065500915273, guid: a95b95ef734f2b4468564ace0f449cd2,
         type: 3}
       propertyPath: m_Name
@@ -608,7 +623,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &75676694
@@ -1327,6 +1342,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cade25d70dccdd4b83d39117d93db12, type: 3}
 --- !u!4 &236376804 stripped
@@ -1809,6 +1839,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1156590244}
     m_Modifications:
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     - target: {fileID: 3874565546880053528, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
         type: 3}
       propertyPath: m_Name
@@ -1884,6 +1929,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1156590244}
     m_Modifications:
+    - target: {fileID: 2452106786717870284, guid: e2a883f0e5d4db74eac3f0a2d7fc56ef,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 2452106786717870284, guid: e2a883f0e5d4db74eac3f0a2d7fc56ef,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 2452106786717870284, guid: e2a883f0e5d4db74eac3f0a2d7fc56ef,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     - target: {fileID: 2838882948496570010, guid: e2a883f0e5d4db74eac3f0a2d7fc56ef,
         type: 3}
       propertyPath: m_RootOrder
@@ -2052,6 +2112,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Paper 5 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d4362579890ca4ebb6d47d2957bba5, type: 3}
@@ -2319,7 +2394,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: ee7159e6e62649043b03d139b3d91b98, type: 2}
+      objectReference: {fileID: 2100000, guid: 7846deb0119307842b7688b9416e59ac, type: 2}
     - target: {fileID: 8788366504472951827, guid: 2aae4400035426346a6bc3758be68c2c,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2400,6 +2475,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cade25d70dccdd4b83d39117d93db12, type: 3}
 --- !u!4 &458243832 stripped
@@ -2415,6 +2505,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1156590244}
     m_Modifications:
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     - target: {fileID: 3874565546880053528, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
         type: 3}
       propertyPath: m_Name
@@ -3166,6 +3271,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper 5 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d4362579890ca4ebb6d47d2957bba5, type: 3}
 --- !u!4 &718812549 stripped
@@ -3345,6 +3465,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Paper 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d4362579890ca4ebb6d47d2957bba5, type: 3}
 --- !u!4 &744925460 stripped
@@ -3454,7 +3589,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &822114913
@@ -3568,6 +3703,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1156590244}
     m_Modifications:
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 3163501212582686594, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
+      objectReference: {fileID: 0}
     - target: {fileID: 3874565546880053528, guid: 2a1dac2ddf58d604b8d3f5f6f17a5ae3,
         type: 3}
       propertyPath: m_Name
@@ -3737,7 +3887,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &875997556
@@ -4187,7 +4337,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1026600512
 Transform:
   m_ObjectHideFlags: 0
@@ -4477,7 +4627,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1156590243
@@ -5271,7 +5421,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1346613584
@@ -5749,7 +5899,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1477898789
@@ -6420,7 +6570,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1604334494
@@ -6563,7 +6713,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1639869611
@@ -6715,6 +6865,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cade25d70dccdd4b83d39117d93db12, type: 3}
@@ -6998,6 +7163,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 6727873872569505529, guid: 3cade25d70dccdd4b83d39117d93db12,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3cade25d70dccdd4b83d39117d93db12, type: 3}
@@ -7321,6 +7501,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Paper 5 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.74612856
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874548699284994842, guid: 82d4362579890ca4ebb6d47d2957bba5,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.764151
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 82d4362579890ca4ebb6d47d2957bba5, type: 3}
@@ -7704,7 +7899,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1904350422
@@ -8140,7 +8335,7 @@ Terrain:
   m_TreeCrossFadeLength: 5
   m_TreeMaximumFullLODCount: 50
   m_DetailObjectDistance: 80
-  m_DetailObjectDensity: 1
+  m_DetailObjectDensity: 0.052
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
@@ -8551,7 +8746,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &2038299833
@@ -8842,7 +9037,7 @@ SpriteRenderer:
   m_Size: {x: 10, y: 20}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1001 &2077499133
