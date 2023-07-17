@@ -115,11 +115,11 @@ public class PlayerMovement : MonoBehaviour
             ResumeButton();
         }
 
-        if (Input.GetKeyDown(KeyCode.K))
-        {
-            int currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
-            UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneIndex + 1);
-        }
+        //if (Input.GetKeyDown(KeyCode.K))
+        //{
+        //    int currentSceneIndex = UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex;
+        //    UnityEngine.SceneManagement.SceneManager.LoadScene(currentSceneIndex + 1);
+        //}
     }
 
     private void OnTriggerEnter(Collider other)
